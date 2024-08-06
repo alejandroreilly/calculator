@@ -1,0 +1,43 @@
+
+.calcBody{
+    background-color: lightgray;
+    border-radius: 5px;
+    border: 2px solid black;
+    height: 500px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%; 
+    box-sizing: border-box;
+
+}
+.numPad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#numButton{
+    background-color: lightblue;
+    color: black;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 2px;
+    width: 33%
+}
+
+.allButtons, .leftTop, .leftBottom, .leftButtons{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+}
+
+.leftButtons{
+    flex-direction: column;
+}
+.leftBottom.button{
+    width:33%;
+}
