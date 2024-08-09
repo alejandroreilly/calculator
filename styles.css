@@ -16,53 +16,29 @@ body{
     box-sizing: border-box;
     flex-direction: column;
 }
-.numPad{
+
+.display{
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-}
-
-#numButton{
-    background-color: lightblue;
-    color: black;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 2px;
-    width:33%
-}
-
-.leftTop button{
-    width:33%;
-}
-
-#operationButton, #equalButton{
-    width: 100%;
-}
-
-.allButtons, .leftTop, .leftBottom, .leftButtons{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    align-items:center;
+    flex: 2;
+    border:2px solid purple;
     width:100%;
 }
-.leftButtons{
-    flex-direction: column;
-    flex:2;
-}
 
-.leftBottom{
-    border: 2px solid black;
-}
-
-.rightButtons{
+.allButtons{
     display:flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    flex:1;
+    flex-wrap: wrap;
+    flex: 5;
+    padding:0;
 }
-.leftBottom.button{
-    width:33%;
+
+button{
+    width: 50px;
+    height: 30px;
+    margin: 8px;
+    border-radius: 4px;
+    border: 1px solid black;
 }
