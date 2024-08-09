@@ -1,4 +1,8 @@
-
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 .calcBody{
     background-color: lightgray;
     border-radius: 5px;
@@ -10,7 +14,7 @@
     align-items: center;
     min-height: 100%; 
     box-sizing: border-box;
-
+    flex-direction: column;
 }
 .numPad{
     display: flex;
@@ -25,18 +29,39 @@
     text-align: center;
     border: 1px solid black;
     border-radius: 2px;
-    width: 33%
+    width:33%
+}
+
+.leftTop button{
+    width:33%;
+}
+
+#operationButton, #equalButton{
+    width: 100%;
 }
 
 .allButtons, .leftTop, .leftBottom, .leftButtons{
     display:flex;
     justify-content: center;
     align-items: center;
-    flex:1;
+    flex-direction: row;
+    width:100%;
 }
-
 .leftButtons{
     flex-direction: column;
+    flex:2;
+}
+
+.leftBottom{
+    border: 2px solid black;
+}
+
+.rightButtons{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex:1;
 }
 .leftBottom.button{
     width:33%;

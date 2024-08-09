@@ -9,16 +9,16 @@
     <body>
         <div class="calcBody">
         <!-- make a div for the whole calculator-->
-            <div class="display">
+            <div class="display">display
             <!-- div for the display -->
             </div>
             <div class="allButtons">
                 <div class="leftButtons">
                     <!-- left top, numpad, and bottom buttons-->
                     <div class="leftTop">
-                        <button id="signChange"></button>
-                        <button id="deleteButton"></button>
-                        <button id="clearButton"></button>
+                        <button id="signChange">+/-</button>
+                        <button id="deleteButton">DEL</button>
+                        <button id="clearButton">AC</button>
                     </div>
                     <div class="numPad">
                         <!-- make sure this is flex-wrap: wrap -->
@@ -33,9 +33,8 @@
                         <button id="numButton">3</button>
                     </div>
                     <div class="leftBottom">
-                        <button id="numButton">0</button>
-                        <button id="decimalButton">.</button>
-                        <button id="equalButton">=</button>
+                        <button id="numButton" style="flex:2">0</button>
+                        <button id="decimalButton" style="flex:1">.</button>
                     </div>
                 </div>
                 <div class="rightButtons">
@@ -43,6 +42,7 @@
                     <button id="operationButton">*</button>
                     <button id="operationButton">-</button>
                     <button id="operationButton">+</button>
+                    <button id="equalButton">=</button>
                 </div>
             </div>
         </div>
