@@ -5,7 +5,7 @@ body{
 }
 .calcBody{
     background-color: lightgray;
-    border-radius: 5px;
+    border-radius: 8px;
     border: 2px solid black;
     height: 500px;
     width: 300px;
@@ -45,6 +45,10 @@ body{
 
 #operationButton, #equalButton, #squareRootButton{
     background-color: lightsalmon;
+}
+
+#deleteButton, #clearButton{
+    background-color: lightcoral;
 }
 
 .bottomRow{
