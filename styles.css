@@ -22,9 +22,11 @@ body{
     justify-content: center;
     align-items:center;
     flex: 2;
-    border:2px solid purple;
+    border:2px solid black;
+    border-radius: 8px;
     width:90%;
     margin: 16px;
+    background-color: aliceblue;
 }
 
 .allButtons{
@@ -37,10 +39,27 @@ body{
     padding:0;
 }
 
+#numButton{
+    background-color: lightblue;
+}
+
+#operationButton, #equalButton, #squareRootButton{
+    background-color: lightsalmon;
+}
+
+.bottomRow{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 button{
     width: 3.5rem;
     height: 3.5rem;
     margin: 8px;
     border-radius: 8px;
-    border: 1px solid black;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: 18px;
 }
