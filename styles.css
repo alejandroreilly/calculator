@@ -35,6 +35,7 @@ body{
 
 .answerContainer{
     max-width: 225px;
+    min-height: 41px;
     margin-right:16px;
     font-size: 32px;
     font-weight: 550;
