@@ -24,14 +24,19 @@ function clearDisplay(){
     needToClearDisplay = false;
 }
 
+//handle clear all
 function clearAll(){
     answerDisplay.textContent='0';
     equationDisplay.textContent="";
     inputNum1='';
     inputOperator=null;
     inputNum2='';
+    needToClearDisplay=false;
 }
 clear.addEventListener('click',clearAll);
+
+//setup equals sign
+equal.addEventListener('click', doMath);
 
 //setup the signChange
 function changeSign(){
@@ -52,7 +57,7 @@ numButtons.forEach((button) => {
 //add number for the number buttons
 function addNumber(num){
     if(answerDisplay.textContent === '0' || needToClearDisplay){
-        answerDisplay.textContent='';
+        clearDisplay();
     }
     answerDisplay.textContent+=num;
 };
@@ -83,7 +88,7 @@ function doMath(){
     }
 
     inputNum2 = answerDisplay.textContent;
-    answerDisplay.textContent=Math.round(operate(inputOperator, inputNum1, inputNum2) * 1000 / 1000);
+    answerDisplay.textContent=Math.round(operate(inputOperator, inputNum1, inputNum2) * 100) / 1000;
     equationDisplay.textContent = `${inputNum1} ${inputOperator} ${inputNum2} = `;
     inputOperator = null;
 }
@@ -94,17 +99,17 @@ function operate(operator, one, two){
     two = Number(two);
     switch(operator){
         case '+':
-            return add(operator, one, two);
+            return add(one, two);
         case '-':
-            return subtract(operator, one, two);
+            return subtract(one, two);
         case '*':
-            return multiply(operator, one, two);
+            return multiply(one, two);
         case '/':
             if(two === 0){
                 return null;
             }
             else{
-                return divide(operator, one, two);
+                return divide(one, two);
             }
         default:
             return null;
