@@ -135,3 +135,16 @@ function multiply(a,b){
 function divide(a,b){
     return a/b;
 }
+
+//KEYBOARD SUPPORT vv
+window.addEventListener('keydown', handleKeyboardInput);
+function handleKeyboardInput(e){
+    if (e.key >= 0 && e.key <= 9) addNumber(e.key);
+    if (e.key === '.') addDecimal();
+    if (e.key === '=' || e.key === 'Enter') doMath();
+    if (e.key === 'Backspace') deleteOne();
+    if (e.key === 'Escape') clearAll();
+    if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/'){
+        addOperation(e.key);
+    }
+}
