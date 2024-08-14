@@ -15,20 +15,18 @@ let inputOperator;
 let inputNum2;
 
 //display number on screen
-display.textContent = displayNum;
+answerDisplay.textContent=0;
 
 //setup the clear button
 function clearDisplay(){
-    displayNum = 0;
-    answerDisplay.textContent=displayNum;
+    answerDisplay.textContent=0;
     equationDisplay.textContent="";
 }
 clear.addEventListener('click',clearDisplay);
 
 //setup the signChange
 function changeSign(){
-    displayNum *= (-1);
-    answerDisplay.textContent=displayNum;
+    return;
 }
 signChange.addEventListener('click',changeSign);
 
@@ -44,8 +42,8 @@ numButtons.forEach((button) => {
 });
 //add number for the number buttons
 function addNumber(num){
-    if(answerDisplay.textContent === "0"){
-        answerDisplay.textContent="";
+    if(answerDisplay.textContent === '0'){
+        answerDisplay.textContent='';
     }
     answerDisplay.textContent+=num;
 }
