@@ -79,7 +79,7 @@ function addOperation(operation){
     }
     inputNum1 = answerDisplay.textContent;
     inputOperator=operation;
-    equationDisplay.textContent = `${inputNum1} ${inputOperator}`;
+    equationDisplay.textContent = `${inputNum1}${inputOperator}`;
     needToClearDisplay = true;
 }
 
@@ -96,7 +96,7 @@ function doMath(){
 
     inputNum2 = answerDisplay.textContent;
     answerDisplay.textContent=Math.round(operate(inputOperator, inputNum1, inputNum2) * 1000) / 1000;
-    equationDisplay.textContent = `${inputNum1} ${inputOperator} ${inputNum2} = `;
+    equationDisplay.textContent = `${inputNum1}${inputOperator}${inputNum2}= `;
     inputOperator = null;
 }
 
