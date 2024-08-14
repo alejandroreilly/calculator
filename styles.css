@@ -95,3 +95,15 @@ button{
     font-size: 22px;
     font-family: 'Silkscreen';
 }
+button:hover{
+    box-shadow: 2px 2px 5px 0px black;
+}
+button:active {
+    -webkit-box-shadow: inset 0px 0px 5px black;
+    -moz-box-shadow: inset 0px 0px 5px black;
+         box-shadow: inset 0px 0px 5px black;
+    outline: none;
+}
+
+
+
