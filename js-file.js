@@ -6,7 +6,8 @@ const opButtons = document.querySelectorAll("#operationButton");
 const numButtons = document.querySelectorAll("#numButton");
 const equal = document.querySelector("#equalButton");
 const decimal = document.querySelector("#decimalButton");
-const display = document.querySelector(".textContainer");
+const answerDisplay = document.querySelector(".answerContainer");
+const equationDisplay = document.querySelector(".equationContainer");
 
 //set input variables
 let displayNum = 0;
@@ -15,4 +16,20 @@ let inputOperator;
 let inputNum2;
 
 //display number on screen
-display.textContent = "displayNum";
+display.textContent = displayNum;
+
+//setup the clear button
+function clearDisplay(){
+    displayNum = 0;
+    answerDisplay.textContent=displayNum;
+}
+clear.addEventListener('click',clearDisplay);
+
+//setup the signChange
+function changeSign(){
+    displayNum *= (-1);
+    answerDisplay.textContent=displayNum;
+}
+signChange.addEventListener('click',changeSign);
+
+//

@@ -18,8 +18,9 @@ body{
 }
 
 .display{
+    flex-direction: column;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: end;
     flex: 2;
     border:2px solid black;
@@ -27,12 +28,19 @@ body{
     width:90%;
     margin: 16px;
     background-color: aliceblue;
+    gap:8px;
 }
 
-.textContainer{
-    margin:16px;
+.answerContainer{
+    margin-right:16px;
     font-size: 32px;
     font-weight: 550;
+}
+.equationContainer{
+    margin-right: 16px;
+    font-size: 20px;
+    color: grey;
+    min-height: 23px;
 }
 
 .allButtons{
