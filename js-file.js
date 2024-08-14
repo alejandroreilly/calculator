@@ -10,7 +10,6 @@ const answerDisplay = document.querySelector(".answerContainer");
 const equationDisplay = document.querySelector(".equationContainer");
 
 //set input variables
-let displayNum = 0;
 let inputNum1;
 let inputOperator;
 let inputNum2;
@@ -32,4 +31,8 @@ function changeSign(){
 }
 signChange.addEventListener('click',changeSign);
 
-//
+//setup the delete button
+function deleteOne(){
+    answerDisplay.textContent = answerDisplay.textContent.toString().slice(0,-1);
+}
+del.addEventListener('click',deleteOne);
