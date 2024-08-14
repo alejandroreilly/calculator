@@ -3,6 +3,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .calcBody{
     background-color: lightgray;
     border-radius: 8px;
@@ -29,6 +30,7 @@ body{
     margin: 16px;
     background-color: aliceblue;
     gap:8px;
+    font-family: 'Silkscreen';
 }
 
 .answerContainer{
@@ -89,5 +91,6 @@ button{
     border-radius: 8px;
     border: 2px solid black;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px;
+    font-family: 'Silkscreen';
 }
