@@ -17,6 +17,20 @@ let needToClearDisplay = false;
 //display number on screen
 answerDisplay.textContent=0;
 
+//setup decimal button
+function addDecimal(){
+    if(needToClearDisplay){
+        clearDisplay;
+    }
+    if(answerDisplay.textContent===''){
+        answerDisplay.textContent='0';
+    }
+    if(answerDisplay.textContent.includes('.')){
+        return
+    }
+    answerDisplay.textContent+='.';
+}
+decimal.addEventListener('click',addDecimal);
 //setup the clear button
 function clearDisplay(){
     answerDisplay.textContent='';
@@ -36,12 +50,6 @@ clear.addEventListener('click',clearAll);
 
 //setup equals sign
 equal.addEventListener('click', doMath);
-
-//setup the signChange
-function changeSign(){
-    return;
-}
-signChange.addEventListener('click',changeSign);
 
 //setup the delete button
 function deleteOne(){
