@@ -78,6 +78,10 @@ body{
     align-items: center;
 }
 
+.bottomRow button{
+    width: 128px;
+}
+
 button{
     width: 3.5rem;
     height: 3.5rem;
