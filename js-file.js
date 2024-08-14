@@ -21,6 +21,7 @@ display.textContent = displayNum;
 function clearDisplay(){
     displayNum = 0;
     answerDisplay.textContent=displayNum;
+    equationDisplay.textContent="";
 }
 clear.addEventListener('click',clearDisplay);
 
@@ -36,3 +37,15 @@ function deleteOne(){
     answerDisplay.textContent = answerDisplay.textContent.toString().slice(0,-1);
 }
 del.addEventListener('click',deleteOne);
+
+//setup number buttons
+numButtons.forEach((button) => {
+    button.addEventListener('click',()=>addNumber(button.textContent));
+});
+//add number for the number buttons
+function addNumber(num){
+    if(answerDisplay.textContent === "0"){
+        answerDisplay.textContent="";
+    }
+    answerDisplay.textContent+=num;
+}
